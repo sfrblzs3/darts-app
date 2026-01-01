@@ -1,3 +1,26 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // Ide kerül minden gombhoz kötött kód
+  document.getElementById("reset").onclick = resetGame;
+  document.getElementById("calibrate").onclick = () => {
+    calibrationStep = 1;
+    alert("Koppints a tábla KÖZEPÉRE");
+  };
+  document.getElementById("undo").onclick = () => {
+    if (throwHistory.length === 0) return;
+
+    const last = throwHistory.pop();
+    players[currentPlayer].score += last;
+    dartsThrown--;
+
+    if (dartsThrown < 0) {
+      dartsThrown = 2;
+      currentPlayer = (currentPlayer + players.length - 1) % players.length;
+    }
+
+    renderScoreboard();
+  };
+});
+
 let players = [
   { name: "Player 1", score: 501 },
   { name: "Player 2", score: 501 }
