@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Darts Scorer</title>
   <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
 </head>
 <body>
 
 <h1>Darts 501</h1>
 
-<div id="scoreboard">
-  <div>Hátralévő pont: <span id="score">501</span></div>
-  <div>Kör: <span id="round">1</span></div>
-</div>
+<div id="scoreboard"></div>
+
 
 <div id="camera-container">
   <video id="video" autoplay playsinline></video>
@@ -23,6 +25,11 @@
 <p>Koppints a nyíl hegyére</p>
 
 <button id="reset">Új játék</button>
+
+<button id="calibrate">Tábla kalibrálása</button>
+
+<button id="undo">Undo</button>
+
 
 <script src="app.js"></script>
 </body>

@@ -1,31 +1,59 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: #111;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background: radial-gradient(circle at top, #222, #000);
   color: white;
   margin: 0;
 }
 
+h1 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+#scoreboard {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0,0,0,0.6);
+  padding: 12px;
+  border-radius: 14px;
+  margin: 10px;
+}
+
+.score-card {
+  text-align: center;
+}
+
+.score-value {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.active {
+  color: #00ff9c;
+}
+
 #camera-container {
   position: relative;
-  width: 100%;
-  max-width: 400px;
+  max-width: 420px;
   margin: auto;
 }
 
 video, canvas {
   width: 100%;
-  border-radius: 10px;
-}
-
-canvas {
-  position: absolute;
-  left: 0;
-  top: 0;
+  border-radius: 16px;
 }
 
 button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
+  background: #111;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 6px;
+  font-size: 14px;
+}
+
+button.primary {
+  background: #00ff9c;
+  color: black;
 }
