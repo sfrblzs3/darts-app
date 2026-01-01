@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darts Scorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Darts 501</h1>
+
+<div id="scoreboard">
+  <div>Hátralévő pont: <span id="score">501</span></div>
+  <div>Kör: <span id="round">1</span></div>
+</div>
+
+<div id="camera-container">
+  <video id="video" autoplay playsinline></video>
+  <canvas id="overlay"></canvas>
+</div>
+
+<p>Koppints a nyíl hegyére</p>
+
+<button id="reset">Új játék</button>
+
+<script src="app.js"></script>
+</body>
+</html>
